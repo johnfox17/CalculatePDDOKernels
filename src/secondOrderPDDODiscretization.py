@@ -57,18 +57,12 @@ class secondOrderPDDODiscretization:
         self.g20 = np.array(g20).reshape((self.kernelDim,self.kernelDim))
         self.g02 = np.array(g02).reshape((self.kernelDim,self.kernelDim))
     
-    def normalizeGPolynomials(self):
-        #self.g20 = np.array(self.g20.flatten()/np.linalg.norm(self.g20.flatten(),1)).reshape((self.kernelDim,self.kernelDim))
-        #self.g02 = np.array(self.g02.flatten()/np.linalg.norm(self.g02.flatten(),1)).reshape((self.kernelDim,self.kernelDim))
-        self.g20 = self.g20
-        self.g02 = self.g02
     def combineGPolynomials(self):
         self.kernel = -(self.g20 + self.g02)
 
     def createPDDOKernel(self):
         self.calculateXis()
         self.calculateGPolynomials()
-        self.normalizeGPolynomials()
         self.combineGPolynomials()
 
     def solve(self):
