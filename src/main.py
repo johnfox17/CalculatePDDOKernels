@@ -25,15 +25,15 @@ def main():
     PDDOMethod4 = PDDO4.fourthOrderPDDODiscretization()
     PDDOMethod4.solve()
 
-    np.savetxt('/home/doctajfox/Documents/Thesis/CalculatePDDOKernels/data/PDDOKernelMesh1stOrder.csv', PDDOMethod1.PDDOKernelMesh, delimiter=",")
-    np.savetxt('/home/doctajfox/Documents/Thesis/CalculatePDDOKernels/data/PDDOKernelMesh2ndOrder.csv', PDDOMethod2.PDDOKernelMesh, delimiter=",")
-    np.savetxt('/home/doctajfox/Documents/Thesis/CalculatePDDOKernels/data/PDDOKernelMesh2ndOrder_4.csv', PDDOMethod2_4.PDDOKernelMesh, delimiter=",")
-    np.savetxt('/home/doctajfox/Documents/Thesis/CalculatePDDOKernels/data/PDDOKernelMesh4thdOrder.csv', PDDOMethod4.PDDOKernelMesh, delimiter=",")
+    np.savetxt('../data/PDDOKernelMesh1stOrder.csv', PDDOMethod1.PDDOKernelMesh, delimiter=",")
+    np.savetxt('../data/PDDOKernelMesh2ndOrder.csv', PDDOMethod2.PDDOKernelMesh, delimiter=",")
+    np.savetxt('../data/PDDOKernelMesh2ndOrder_4.csv', PDDOMethod2_4.PDDOKernelMesh, delimiter=",")
+    np.savetxt('../data/PDDOKernelMesh4thdOrder.csv', PDDOMethod4.PDDOKernelMesh, delimiter=",")
 
-    np.savetxt('/home/doctajfox/Documents/Thesis/CalculatePDDOKernels/data/kernel1stOrder.csv', PDDOMethod1.kernel, delimiter=",")    
-    np.savetxt('/home/doctajfox/Documents/Thesis/CalculatePDDOKernels/data/kernel2ndOrder.csv', PDDOMethod2.kernel, delimiter=",")
-    np.savetxt('/home/doctajfox/Documents/Thesis/CalculatePDDOKernels/data/kernel2ndOrder_4.csv', PDDOMethod2_4.kernel, delimiter=",")
-    np.savetxt('/home/doctajfox/Documents/Thesis/CalculatePDDOKernels/data/kernel4thdOrder.csv', PDDOMethod4.kernel, delimiter=",")
+    np.savetxt('../data/kernel1stOrder.csv', PDDOMethod1.kernel, delimiter=",")    
+    np.savetxt('../data/kernel2ndOrder.csv', PDDOMethod2.kernel, delimiter=",")
+    np.savetxt('../data/kernel2ndOrder_4.csv', PDDOMethod2_4.kernel, delimiter=",")
+    np.savetxt('../data/kernel4thdOrder.csv', PDDOMethod4.kernel, delimiter=",")
 
 
 
